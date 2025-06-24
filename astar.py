@@ -95,12 +95,15 @@ def convert_path_to_world_coords_in_expanded_maze(cell_size=3, resolution=1.0):
         print("❌ Caminho não encontrado.")
         return []
     
+    print(f"path: {path}")
+    
     plot_base_maze(costmap, path, start, goal)
 
     world_path = []
     for row, col in path:
         # Centro da célula expandida
-        x = col * cell_size + cell_size / 2
+        adjusted_col = col - 4
+        x = adjusted_col * cell_size + cell_size / 2
         y = row * cell_size + cell_size / 2
         world_path.append((x * resolution, y * resolution))
 
