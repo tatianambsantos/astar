@@ -47,8 +47,8 @@ Salva a matriz em base_maze.txt.
 
 Chama generate_sdf_from_maze() para gerar o mundo .sdf com paredes 3D.
 
-🤖 2️⃣ Modelo do Robô (SDF)
-Arquivo: meu_carrin.sdf
+### 🤖 2️⃣ Modelo do Robô (SDF)
+**Arquivo:** meu_carrin.sdf
 
 O modelo define um robô diferencial simples, com:
 
@@ -58,7 +58,7 @@ Duas rodas laterais com juntas revolute
 
 Uma roda castor traseira com junta ball
 
-📦 Plugins adicionados:
+# 📦 Plugins adicionados:
 
 ✅ DiffDrive – permite movimentar o robô com velocidades linear e angular
 
@@ -72,13 +72,11 @@ Edit
 
 IMU, LIDAR, Câmera
 
-
-
 É publicado automaticamente o tópico /model/meu_carrin/odometry
 
-3. Planejamento com A*
+### 3. Planejamento com A*
 
-Arquivo: astar.py
+**Arquivo:** astar.py
 
 Lê a matriz base_maze.txt.
 
@@ -94,9 +92,9 @@ Função principal:
 
 convert_path_to_world_coords_in_expanded_maze()
 
-4. Controle do Robô no ROS 2
+### 4. Controle do Robô no ROS 2
 
-Arquivo: path_follower.py
+**Arquivo:** path_follower.py
 
 Cria um nó ROS 2 que:
 
