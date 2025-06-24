@@ -46,25 +46,32 @@ Salva a matriz em base_maze.txt.
 
 Chama generate_sdf_from_maze() para gerar o mundo .sdf com paredes 3D.
 
-2. Modelo do Robô (SDF)
-
+🤖 2️⃣ Modelo do Robô (SDF)
 Arquivo: meu_carrin.sdf
 
-Inclui:
+O modelo define um robô diferencial simples, com:
 
-Corpo (chassis)
+Corpo principal (chassi)
 
-Duas rodas laterais com revolute joints
+Duas rodas laterais com juntas revolute
 
-Uma roda castor traseira com ball joint
+Uma roda castor traseira com junta ball
 
-Plugins:
+📦 Plugins adicionados:
 
-DiffDrive para movimento
+✅ DiffDrive – permite movimentar o robô com velocidades linear e angular
 
-OdomPublisher para odometria
+✅ OdomPublisher – publica automaticamente no tópico:
 
-IMU, LIDAR, câmera (opcional)
+bash
+Copy
+Edit
+/model/meu_carrin/odometry
+🧭 Sensores opcionais:
+
+IMU, LIDAR, Câmera
+
+
 
 É publicado automaticamente o tópico /model/meu_carrin/odometry
 
