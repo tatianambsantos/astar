@@ -1,42 +1,44 @@
 # astar
 
-🧭 Projeto: Navegação com Robô Diferencial em Labirinto 3D com A*
+# 🧭 Projeto: Navegação com Robô Diferencial em Labirinto 3D com A⁎
 
-Este projeto demonstra como controlar um robô com rodas diferenciais em um ambiente simulado no Gazebo Ignition. O robô deve seguir um caminho gerado com o algoritmo A* sobre um labirinto expandido, com paredes modeladas automaticamente a partir de uma matriz binária.
+Este projeto demonstra como controlar um **robô com rodas diferenciais** em um ambiente simulado no **Gazebo Ignition**. O robô deve seguir um caminho gerado com o algoritmo **A*** sobre um labirinto expandido, com paredes modeladas automaticamente a partir de uma matriz binária.
 
-📚 Objetivo
+---
+
+## 📚 Objetivo
 
 Ensinar passo a passo:
 
-Como gerar um labirinto com caminhos navegáveis.
+✅ Como **gerar um labirinto** com caminhos navegáveis  
+✅ Como **converter esse labirinto** em um mundo `.sdf` para o Gazebo  
+✅ Como usar o **algoritmo A*** para planejar rotas  
+✅ Como controlar um robô no **ROS 2** usando `/cmd_vel` e **odometria**
 
-Como converter esse labirinto em um mundo .SDF para Gazebo.
+---
 
-Como usar A* para planejar rotas.
+## 🧱 Etapas do Projeto
 
-Como controlar um robô no ROS 2 usando /cmd_vel e odometria para seguir essa rota.
+---
 
-🧱 Etapas do Projeto
+### 1️⃣ Geração do Labirinto Expandido  
+**Arquivo:** `generate_maze_and_world.py`
 
-1. Geração do Labirinto Expandido
+- Define uma matriz binária `16x16`, onde:
+  - `0` representa **caminho livre**
+  - `1` representa **parede**
 
-Arquivo: generate_maze_and_world.py
+- A matriz é **expandida** para garantir largura realista dos caminhos (ex: 3 metros).  
+  Isso é feito transformando cada célula em um **bloco 3x3**.
 
-Define uma matriz binária 16x16:
-
-0 representa caminho livre.
-
-1 representa parede.
-
-É feita uma "expansão" da matriz para garantir que cada caminho tenha uma largura realista (3 metros, por exemplo). Isso é feito duplicando cada célula livre/ocupada em um bloco 3x3.
-
-Exemplo de matriz base:
-
+#### 📌 Exemplo de matriz base:
+```python
 base_maze = [
   [1, 1, 1, 1, 0, 1, 1, ...],
   [1, 0, 0, 1, 0, 0, 1, ...],
   ...
 ]
+
 
 Gera uma visualização com matplotlib.
 
