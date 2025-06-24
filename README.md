@@ -38,6 +38,7 @@ base_maze = [
   [1, 0, 0, 1, 0, 0, 1, ...],
   ...
 ]
+```
 
 
 Gera uma visualização com matplotlib.
