@@ -58,4 +58,5 @@ plt.imshow(maze, cmap='gray_r')
 plt.title("Maze com largura mínima 3")
 plt.show()
 
-generate_maze.generate_sdf_from_maze(maze)
+# generate_maze.generate_sdf_from_maze_1(maze)
+generate_maze.generate_sdf_from_maze_3(base_maze)
